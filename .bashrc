@@ -10,6 +10,7 @@ fi
 
 # User specific aliases and functions
 alias ls='ls --color=auto'
+alias ll='ls -al'
 
 # export PS1="\[\e[00;37m\]\u : \[\e[0m\]"
 arrow=$'\u00BB'
@@ -33,3 +34,12 @@ export STUDIO_JDK
 
 PATH=$PATH:/home/adib/sys_local/bin
 export PATH
+
+# for python disable write byte code
+PYTHONDONTWRITEBYTECODE=1
+export PYTHONDONTWRITEBYTECODE
+
+# for python library 
+PYTHONPATH=$PYTHONPATH:/media/D/work
+export PYTHONPATH
+
