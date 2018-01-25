@@ -10,6 +10,7 @@ fi
 
 # User specific aliases and functions
 alias ls='ls --color=auto'
+alias ll='ls -al'
 
 # export PS1="\[\e[00;37m\]\u : \[\e[0m\]"
 arrow=$'\u00BB'
@@ -30,6 +31,23 @@ shopt -u progcomp
 # for java
 STUDIO_JDK=/home/adib/sys_local/standalone/jdk1.8.0_102
 export STUDIO_JDK
+JAVA_HOME=/home/adib/sys_local
+export JAVA_HOME
+
+SCALA_HOME=/home/adib/sys_local/standalone/scala-2.12.0
+export SCALA_HOME
+
+SPARK_HOME=/media/Linux/sys_local/standalone/spark-2.2.0-bin-hadoop2.7
+export SPARK_HOME
 
 PATH=$PATH:/home/adib/sys_local/bin
 export PATH
+
+# for python disable write byte code
+PYTHONDONTWRITEBYTECODE=1
+export PYTHONDONTWRITEBYTECODE
+
+# for python library 
+PYTHONPATH=$PYTHONPATH:/media/D/work
+export PYTHONPATH
+

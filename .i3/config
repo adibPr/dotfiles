@@ -17,8 +17,7 @@ set $mod_cmd Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 
-# font pango:DejaVu Sans Mono 8
-font pango:Raleway Medium 10 
+font pango:OpenSans Regular 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -91,8 +90,14 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+# bindsym $mod+d focus child
 
+<<<<<<< HEAD
+=======
+# disable change focus while mouse is over another window
+focus_follows_mouse no
+
+>>>>>>> 408b76287fb8a0233ac5a2a71bf123cf9a8e8171
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -119,8 +124,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod_cmd+x exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -155,14 +162,13 @@ mode "resize" {
 bar {
     status_command i3status -c /home/adib/.i3/i3status.conf
 }
-#
+
 # for pcmanfm
 bindsym $mod_cmd+e exec --no-startup-id Thunar &
 
-# for lock
+# for screen lock
 bindsym $mod_cmd+l exec --no-startup-id xscreensaver-command -lock
 
-#
 # exec Telegram, thunderbird on 2 
 assign [class="TelegramDesktop"] 3
 assign [class="Thunderbird"] 2
@@ -174,9 +180,10 @@ exec --no-startup-id xset b off &
 exec --no-startup-id nitrogen --restore &
 
 # for applet networking
-exec --no-startup-id nm-applet &
-# volumeicon &
-# exec --no-startup-id pnmixer &
+# exec --no-startup-id nm-applet &
+
+# for volume
+exec --no-startup-id volumeicon &
 
 # telegram
 exec --no-startup-id Telegram &
