@@ -92,12 +92,8 @@ bindsym $mod+a focus parent
 # focus the child container
 # bindsym $mod+d focus child
 
-<<<<<<< HEAD
-=======
 # disable change focus while mouse is over another window
 focus_follows_mouse no
-
->>>>>>> 408b76287fb8a0233ac5a2a71bf123cf9a8e8171
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
