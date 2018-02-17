@@ -29,6 +29,4 @@ unset command_not_found_handle
 shopt -u progcomp 
 
 # call env.sh
-if [ -f ~/env.sh ]; then
-    . ~/env.sh
-fi
+source ~/env.sh
