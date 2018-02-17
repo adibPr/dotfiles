@@ -176,7 +176,7 @@ exec --no-startup-id xset b off &
 exec --no-startup-id nitrogen --restore &
 
 # for applet networking
-# exec --no-startup-id nm-applet &
+exec --no-startup-id nm-applet &
 
 # for volume
 exec --no-startup-id volumeicon &
@@ -185,7 +185,7 @@ exec --no-startup-id volumeicon &
 exec --no-startup-id Telegram &
 
 # thunderbird
-exec --no-startup-id thunderbird &
+# exec --no-startup-id thunderbird &
 
 # for screensaver
 exec --no-startup-id xscreensaver -nosplash &
