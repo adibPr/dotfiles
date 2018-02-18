@@ -47,8 +47,8 @@ contains() {
     return $result
 }
 
-blacklist=".git .. ."
-for d in .* ; do
+blacklist=".git .. . README.md install.sh"
+for d in * .* ; do
     if `contains "$blacklist" "$d"` ; then
         echo "$d is skipped"
     else 
