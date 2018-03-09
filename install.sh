@@ -60,5 +60,5 @@ done
 
 # special for vim
 echo "Cloning vundle"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 # then you just need to plugin install inside vim
