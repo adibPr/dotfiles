@@ -30,3 +30,7 @@ shopt -u progcomp
 
 # call env.sh
 source ~/env.sh
+
+# autocutsel to automatically sync primary and secondary buffer
+autocutsel &
+autocutsel -s PRIMARY &
