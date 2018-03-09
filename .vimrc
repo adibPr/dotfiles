@@ -12,6 +12,8 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
+Plugin 'derekwyatt/vim-scala'
+Bundle 'Rykka/riv.vim'
 
 " End vundle script
 call vundle#end ()
@@ -80,3 +82,10 @@ let g:airline_symbols_ascii = 1
 
 "Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+function! InsertLOGS ()
+    " this is file for template
+    r~/.vim/templates/rest.txt
+endfunction
+
+nmap <C-h> :call InsertLOGS()<CR>

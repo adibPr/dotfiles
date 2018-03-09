@@ -5,10 +5,10 @@
 # SCALA_HOME=
 # export SCALA_HOME
 
-# SPARK_HOME=/media/Linux/sys_local/standalone/spark-2.2.1-bin-hadoop2.7
-# export SPARK_HOME
+SPARK_HOME=/media/Linux/sys_local/standalone/spark-2.2.0-bin-hadoop2.7
+export SPARK_HOME
 
-# PATH=$PATH:/home/adib/sys_local/bin:/home/adib/.local/bin
+ PATH=$PATH:/home/adib/sys_local/bin:/home/adib/.local/bin
 # export PATH
 
 # for python disable write byte code
