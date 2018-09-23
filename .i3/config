@@ -165,6 +165,10 @@ bindsym $mod_cmd+e exec --no-startup-id Thunar &
 # for screen lock
 bindsym $mod_cmd+l exec --no-startup-id xscreensaver-command -lock
 
+# for showoff conky
+bindsym $mod_cmd+d workspace 99 
+bindsym $mod_cmd+s workspace back_and_forth
+
 # exec Telegram, thunderbird on 2 
 assign [class="TelegramDesktop"] 3
 assign [class="Thunderbird"] 2
