@@ -1,0 +1,73 @@
+conky.config = {
+    alignment = 'top_right',
+    background = true,
+    border_width = 1,
+    cpu_avg_samples = 2,
+	default_color = '#6E6E6D',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'Nemoy:size=7',
+    gap_x = 10,
+    gap_y = 30,
+    minimum_height = 2000,
+	minimum_width = 300,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = false,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+	own_window_transparent = true,
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false,
+};
+
+
+conky.text = [[
+${color #1793D2}${alignc}$nodename${color}
+${font FontAwesome} $font${time %d/%m/%y} $alignr $kernel
+${color #1793D2}Uptime:$color $uptime ${color #1793D2} $alignr Load:$color $loadavg
+$hr
+${color #1793D2}${alignc}Network${color}
+${color #1793D2}${font FontAwesome} $font$color upload$alignr${color #1793D2}${font FontAwesome} $font$color download
+${upspeedgraph wlp2s0 30,140 06E9F8 2104FA}$alignr${downspeedgraph wlp2s0 30,140 FFFF00 DD3A21}
+$hr
+${color #1793D2}${alignc}CPU${color}
+${color #1793D2}${font FontAwesome}$font .1$color    ${cpubar cpu1 9,100} $alignr ${color #1793D2}${font FontAwesome}$font .2$color    ${cpubar cpu2 9,100}
+${color #1793D2}${font FontAwesome}$font .3$color    ${cpubar cpu3 9,100} $alignr ${color #1793D2}${font FontAwesome}$font .4$color    ${cpubar cpu4 9,100}
+$hr
+${color #1793D2}$alignc MEMORY$color
+${color #1793D2}${font FontAwesome}$font$color : $memperc% = $mem / $memmax     $alignr ${membar 9,100}
+${color #1793D2}Swap :$color $swapperc% = $swap/$swapmax $alignr ${swapbar 9, 100}
+$hr
+${color #1793D2}$alignc Temperatures$color
+${color #1793D2}HDDs			${alignr}	${color} ${hddtemp /dev/sda}    ${hddtemp /dev/sdb}    ${hddtemp /dev/sdc}    ${hddtemp /dev/sdd}    ${hddtemp /dev/sde}
+${color #1793D2}CPUs			${alignr}	${color} ${hwmon 1 temp 1}    ${hwmon 1 temp 2}    ${hwmon 1 temp 3}    ${hwmon 1 temp 4}
+$hr
+${color #1793D2}$alignc File System$color
+${color #1793D2}/     ${color}${fs_used /}/${fs_size /}											
+${fs_bar 9 /}
+${color #1793D2}Linux     ${color}${fs_used /media/Linux}/${fs_size /media/Linux}											
+${fs_bar 9 /media/Linux}
+${color #1793D2}C    ${color}${fs_used /media/C}/${fs_size /media/C}
+${fs_bar 9 /media/C}
+${color #1793D2}D     ${color}${fs_used /media/D}/${fs_size /media/D}
+${fs_bar 9 /media/D}
+$hr
+${color #1793D2}$alignc Process$color
+${color #1793D2}Name                     ${goto 1135}CPU%     MEM%     TIME     USER    $alignr PID $color
+${top name 1}  ${goto 1135}${top cpu 1}      ${top mem 1} ${top time 1}   ${top user 1} $alignr${top pid 1}
+${top name 2}  ${goto 1135}${top cpu 2}      ${top mem 2} ${top time 2}   ${top user 2} $alignr${top pid 2}
+${top name 3}  ${goto 1135}${top cpu 3}      ${top mem 3} ${top time 3}   ${top user 3} $alignr${top pid 3}
+]];

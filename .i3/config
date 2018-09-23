@@ -189,3 +189,7 @@ exec --no-startup-id Telegram &
 
 # for screensaver
 exec --no-startup-id xscreensaver -nosplash &
+
+# for conky
+exec_always --no-startup-id conky -c ~/.conky/conky_static.rc
+exec_always --no-startup-id conky -c ~/.conky/conky_dynamic.rc
