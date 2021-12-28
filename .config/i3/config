@@ -161,9 +161,14 @@ bar {
 
 # for pcmanfm
 bindsym $mod_cmd+e exec --no-startup-id Thunar &
+# for qnote
+bindsym $mod_cmd+n exec --no-startup-id qnote &
 
 # for screen lock
 bindsym $mod_cmd+l exec --no-startup-id xscreensaver-command -lock
+
+# for screencapture flameshot
+bindsym Print exec --no-startup-id flameshot gui
 
 # for showoff conky
 bindsym $mod_cmd+d workspace 99 
@@ -171,6 +176,7 @@ bindsym $mod_cmd+s workspace back_and_forth
 
 # exec Telegram, thunderbird on 2 
 assign [class="TelegramDesktop"] 3
+assign [class="Slack"] 3
 assign [class="Thunderbird"] 2
 
 # disable annoying bell
@@ -185,8 +191,10 @@ exec --no-startup-id nm-applet &
 # for volume
 exec --no-startup-id volumeicon &
 
-# telegram
+# chat program 
 exec --no-startup-id Telegram &
+exec --no-startup-id slack &
+exec --no-startup-id element-desktop &
 
 # thunderbird
 # exec --no-startup-id thunderbird &
