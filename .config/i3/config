@@ -17,7 +17,7 @@ set $mod_cmd Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 
-font pango:OpenSans Regular 8
+font pango:OpenSans Regular 9
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -30,7 +30,7 @@ font pango:OpenSans Regular 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id mate-terminal
 
 # kill focused window
 bindsym Mod1+F4 kill
@@ -160,7 +160,8 @@ bar {
 }
 
 # for pcmanfm
-bindsym $mod_cmd+e exec --no-startup-id Thunar &
+bindsym $mod_cmd+e exec --no-startup-id caja &
+
 # for qnote
 bindsym $mod_cmd+n exec --no-startup-id qnote &
 
@@ -174,10 +175,11 @@ bindsym Print exec --no-startup-id flameshot gui
 bindsym $mod_cmd+d workspace 99 
 bindsym $mod_cmd+s workspace back_and_forth
 
-# exec Telegram, thunderbird on 2 
+
 assign [class="TelegramDesktop"] 3
+assign [class="Element"] 3
 assign [class="Slack"] 3
-assign [class="Thunderbird"] 2
+# assign [class="Thunderbird"] 2
 
 # disable annoying bell
 exec --no-startup-id xset b off &
@@ -189,9 +191,9 @@ exec --no-startup-id nitrogen --restore &
 exec --no-startup-id nm-applet &
 
 # for volume
-exec --no-startup-id volumeicon &
+exec --no-startup-id mate-volume-control-applet &
 
-# chat program 
+# chat program
 exec --no-startup-id Telegram &
 exec --no-startup-id slack &
 exec --no-startup-id element-desktop &
@@ -203,5 +205,5 @@ exec --no-startup-id element-desktop &
 exec --no-startup-id xscreensaver -nosplash &
 
 # for conky
-exec_always --no-startup-id conky -c ~/.conky/conky_static.rc &
-exec_always --no-startup-id conky -c ~/.conky/conky_dynamic.rc &
+# exec_always --no-startup-id conky -c ~/.conky/conky_static.rc &
+# exec_always --no-startup-id conky -c ~/.conky/conky_dynamic.rc &
